@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/Movie.php';
+    require_once __DIR__ . '/data.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,11 +11,15 @@
 </head>
 <body>
     <?php
-        $movie1 = new Movie("Star Wars", 1977, "George Lucas", "Action", 121, 5, "A long time ago in a galaxy far, far away...");
-        $movie2 = new Movie("The Matrix", 1999, "The Wachowskis", "Action", 136, 5, "A young man who discovers that he is a good man and can change the world");
+        foreach ($movies as $movie) {
+            echo '<hr>';
+            
+            echo $movie;
+            
+            echo '<hr>';
 
-        echo $movie1 . '<br>';
-        echo $movie2 . '<br>';
+            var_dump($movie);
+        }
     ?>
 </body>
 </html>
