@@ -14,7 +14,8 @@
         foreach ($movies as $movie) {
             echo '<hr>';
             
-            echo $movie;
+            echo $movie . ' - ';
+            echo $movie->getGenre();
             
             echo '<hr>';
 
